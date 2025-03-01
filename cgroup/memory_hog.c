@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <sys/resource.h>
 
-#define ALLOC_SIZE (100 * 1024 * 2048)
+#define ALLOC_SIZE (100 * 1024 * 1024) //100MB
 #define ALLOC_TIME 30
 
 int main() {
@@ -29,7 +29,7 @@ int main() {
 
         getrusage(RUSAGE_SELF, &usage);
 
-        sleep(1);
+        sleep(0.5);
     }
 
     printf("Memory hog finished. Freeing memory...\n");
